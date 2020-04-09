@@ -15,6 +15,7 @@ public class User {
     private String userName;
     @Column(name = "post_id", nullable = false)
     private Post post;
+    @ManyToOne
     @Column(name = "followers_id", nullable = false)
     private Followers followers;
 
