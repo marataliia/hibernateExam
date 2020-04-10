@@ -46,6 +46,7 @@ public class App
         user1.putLikes(post4);
         user2.putLikes(post4);
 
+       UserDB.showUsersBySortingNames();
 
 
 

@@ -19,9 +19,9 @@ public class UserDB {
 
 
 
-    public List<User> showUsersBySortingNames () {
+    public static List<User> showUsersBySortingNames () {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        List<User> users = session.createQuery("from kg.entities.User ORDER BY userName").list();
+        List<User> users = session.createQuery("from User u ORDER BY u.userName asc", User.class).list();
         session.close();
         return users;
     }
